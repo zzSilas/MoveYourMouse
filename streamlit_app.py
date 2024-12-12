@@ -1,7 +1,7 @@
 import streamlit as st
+import pyautogui
+import time
 if st.button("ShakeShake!!"):
-    import pyautogui
-    import time
     pyautogui.FAILSAFE = False
     while True:
         pyautogui.moveRel(10, 0)  # 向右移动10个像素
