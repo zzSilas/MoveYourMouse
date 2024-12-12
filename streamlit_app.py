@@ -1,6 +1,11 @@
 import streamlit as st
-
-st.title("🎈 My new app")
-st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
-)
+if st.button("ShakeShake!!"):
+    import pyautogui
+    import time
+    pyautogui.FAILSAFE = False
+    while True:
+        pyautogui.moveRel(10, 0)  # 向右移动10个像素
+        time.sleep(1)           # 等待0.1秒
+        pyautogui.moveRel(-10, 0) # 向左移动10个像素
+        time.sleep(1)           # 等待0.1秒
+    st.success(f"Ready!")
